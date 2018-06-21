@@ -9,6 +9,7 @@ lazy val commonSettings = Seq(
   )
 )
 
-lazy val root = project.in(file(".")).settings(commonSettings: _*).aggregate(misc)
+lazy val root = project.in(file(".")).settings(commonSettings: _*).aggregate(misc, scalazTests)
 
 lazy val misc = project.settings(commonSettings: _*)
+lazy val scalazTests = project.in(file("scalazTests")).settings(commonSettings: _*)
