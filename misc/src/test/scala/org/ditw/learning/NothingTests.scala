@@ -14,6 +14,11 @@ class NothingTests extends FlatSpec with Matchers with TableDrivenPropertyChecks
 
     val strList:List[String] = "let" :: "us" :: Nil
     strList.size shouldBe 2
+
+    val nothingList:List[Nothing] = List()
+    val strListNothing:List[String] = nothingList // compiles since Nothing <: String
+    println(strListNothing)
+    strListNothing shouldBe Nil
   }
 
   "None is an Option[Nothing] test" should "pass" in {
