@@ -15,7 +15,8 @@ lazy val misc = project.settings(commonSettings: _*)
 lazy val scalazTests = project.settings(
   commonSettings,
   libraryDependencies ++= Seq(
-    "org.scalaz" %% "scalaz-core" % "7.2.24"
+    "org.scalaz" %% "scalaz-core" % "7.2.24",
+    "com.intel.analytics.bigdl" %% "bigdl-SPARK" % "0.6.0"
   )
 )
 
